@@ -1,69 +1,116 @@
 <!doctype html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Portafolio del Proyecto Integrador HIRE-U: documentos de gestión, planificación, manual y presupuesto.">
-<title>HIRE-U | Portafolio del Proyecto Integrador</title>
-<link rel="icon" type="image/png" href="Logo%20HIRE-U%202.0.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--orange:#ea7b1a;--bg:#101010;--panel:#191919;--panel2:#202020;--text:#f5f5f5;--muted:#b9b9b9;--line:#343434;--soft:#f5efe9}
-*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:100px}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}a{color:inherit;tex[...]
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio del Proyecto Integrador HIRE-U: documentos de gestión, planificación, manual y presupuesto.">
+  <title>HIRE-U | Portafolio del Proyecto Integrador</title>
+  <link rel="icon" type="image/png" href="Logo%20HIRE-U%202.0.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --orange:#ea7b1a;
+      --bg:#0f0f0f;
+      --panel:#191919;
+      --panel2:#202020;
+      --text:#f5f5f5;
+      --muted:#b9b9b9;
+      --line:#343434;
+      --soft:#f5efe9;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;background:rgba(10,10,10,0.6);backdrop-filter:blur(6px);z-index:50}
+    .navin{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;align-items:center;gap:12px;color:var(--text);font-weight:700}
+    .brand img{width:48px;height:48px;object-fit:contain}
+    .brand span{color:var(--orange)}
+    .links a{margin-left:20px;color:var(--muted);font-weight:600}
+    .links a:hover{color:var(--text)}
+
+    /* HERO */
+    .hero{min-height:80vh;display:flex;align-items:center}
+    .eyebrow{color:var(--orange);font-weight:700;margin-bottom:10px}
+    h1{font-size:44px;margin:6px 0}
+    h1 span{color:var(--orange)}
+    p{color:var(--muted);max-width:760px}
+    .actions{margin-top:18px}
+    .btn{display:inline-block;padding:10px 18px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text);margin-right:12px}
+    .btn.primary{background:var(--orange);color:#111;border:none}
+    .pill-wrap{margin-top:14px;display:flex;gap:8px;flex-wrap:wrap}
+    .pill{background:#222;padding:6px 10px;border-radius:999px;color:var(--muted);font-size:13px}
+
+    /* sections */
+    .section{padding:80px 0}
+    .sectionhead{margin-bottom:30px}
+    .split{display:flex;gap:20px}
+    .panel{background:var(--panel);padding:20px;border-radius:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+    .card{background:var(--panel2);padding:18px;border-radius:12px}
+    .num{opacity:0.6;font-size:12px;margin-bottom:8px;color:var(--muted)}
+
+    .timeline .step{display:flex;gap:14px;align-items:flex-start;background:var(--panel);padding:12px;border-radius:10px;margin-bottom:10px}
+    .notice{color:var(--muted);margin-top:12px}
+
+    footer{padding:28px 0;text-align:center;color:var(--muted);border-top:1px solid rgba(255,255,255,0.03)}
+
+    /* responsive */
+    @media(max-width:800px){
+      .split{flex-direction:column}
+      h1{font-size:32px}
+      .navin{padding:10px 0}
+      .links{display:none}
+    }
+  </style>
 </head>
 <body>
 <header class="nav"><div class="container navin">
-<a class="brand" href="#inicio"><img src="Logo%20HIRE-U%202.0.png" alt="Logo HIRE-U"><div>HIRE<span>-U</span></div></a>
-<nav class="links" aria-label="Navegación principal"><a href="#proyecto">Proyecto</a><a href="#documentos">Documentos</a><a href="#gestion">Gestión</a><a href="#equipo">Equipo</a></nav>
+  <a class="brand" href="#inicio"><img src="Logo%20HIRE-U%202.0.png" alt="Logo HIRE-U"><div>HIRE<span>-U</span></div></a>
+  <nav class="links" aria-label="Navegación principal"><a href="#proyecto">Proyecto</a><a href="#documentos">Documentos</a><a href="#gestion">Gestión</a><a href="#equipo">Equipo</a></nav>
 </div></header>
-<main>
-<section class="hero" id="inicio"><div class="container">
-<div class="eyebrow">Proyecto Integrador · Tecnología Desarrollo de Software</div>
-<h1>Conectando talento con <span>oportunidades.</span></h1>
-<p>HIRE-U es una propuesta de plataforma web que busca acercar a los egresados de la Universidad de San Buenaventura a empresas y oportunidades laborales, mediante un espacio digital enfocado en la em[...]
-<div class="actions"><a class="btn primary" href="#documentos">Explorar documentos ↘</a><a class="btn" href="https://github.com/totemich20005/Portafolio-hire-u-2.0" target="_blank" rel="noopener">Ve[...]
-<div class="pill-wrap"><span class="pill">Identidad naranja y negro</span><span class="pill">Plataforma web</span><span class="pill">En desarrollo inicial</span></div>
-</div></section>
+<main style="padding-top:90px">
+  <section class="hero" id="inicio"><div class="container">
+    <div class="eyebrow">Proyecto Integrador · Tecnología Desarrollo de Software</div>
+    <h1>Conectando talento con <span>oportunidades.</span></h1>
+    <p>HIRE-U es una propuesta de plataforma web que busca acercar a los egresados de la Universidad de San Buenaventura a empresas y oportunidades laborales, mediante un espacio digital enfocado en la empleabilidad y el desarrollo profesional.</p>
+    <div class="actions"><a class="btn primary" href="#documentos">Explorar documentos ↘</a><a class="btn" href="https://github.com/totemich20005/Portafolio-hire-u-2.0" target="_blank" rel="noopener">Ver repositorio base</a></div>
+    <div class="pill-wrap"><span class="pill">Identidad naranja y negro</span><span class="pill">Plataforma web</span><span class="pill">En desarrollo inicial</span></div>
+  </div></section>
 
-<section class="section" id="proyecto"><div class="container"><div class="sectionhead"><div class="eyebrow">01 · El proyecto</div><h2>Una red profesional para la comunidad universitaria</h2><p>El por[...]
-<div class="split">
-<article class="panel"><h3>Objetivo general</h3><p>Diseñar y desarrollar una plataforma web que facilite la conexión entre los egresados de la Universidad de San Buenaventura y las oportunidades lab[...]
-<article class="panel"><h3>Alcance</h3><p>El proyecto contempla planificación, diseño de interfaz, desarrollo progresivo, pruebas, documentación técnica y entregables de gestión. Las funcionalida[...]
-</div></div></section>
+  <section class="section" id="proyecto"><div class="container"><div class="sectionhead"><div class="eyebrow">01 · El proyecto</div><h2>Una red profesional para la comunidad universitaria</h2><p>El propósito es facilitar la conexión entre egresados y empresas mediante un sistema de perfiles, ofertas y gestión de convocatorias.</p></div>
+    <div class="split">
+      <article class="panel"><h3>Objetivo general</h3><p>Diseñar y desarrollar una plataforma web que facilite la conexión entre los egresados y las oportunidades laborales.</p></article>
+      <article class="panel"><h3>Alcance</h3><p>Planificación, diseño de interfaz, desarrollo progresivo, pruebas, documentación técnica y entregables de gestión.</p></article>
+    </div></div></section>
 
-<section class="section" id="documentos"><div class="container"><div class="sectionhead"><div class="eyebrow">02 · Entregables</div><h2>Documentación del proyecto</h2><p>Consulta o descarga los prin[...]
-<div class="grid">
-<article class="card"><div class="num">DOCUMENTO 01</div><h3>Acta de presentación</h3><p>Descripción, justificación, objetivos, alcance y beneficiarios del proyecto.</p><a class="btn" href="01-acta[...]
-<article class="card"><div class="num">DOCUMENTO 02</div><h3>Plan de gestión</h3><p>Metodología de trabajo, fases, seguimiento, recursos y gestión de riesgos.</p><a class="btn" href="plan%20de%20ge[...]
-<article class="card"><div class="num">DOCUMENTO 03</div><h3>EDT</h3><p>Desglose de fases, paquetes de trabajo y entregables del proyecto.</p><a class="btn" href="plan%20de%20gestion%20y%20EDT.pdf" ta[...]
-<article class="card"><div class="num">DOCUMENTO 04</div><h3>Matriz RACI</h3><p>Propuesta de responsables, aprobadores, consultados e informados.</p><a class="btn" href="Matriz%20RACI%20PERT%20Hire-U.[...]
-<article class="card"><div class="num">DOCUMENTO 05</div><h3>Diagrama PERT</h3><p>Actividades, dependencias y duración preliminar del cronograma.</p><a class="btn" href="Matriz%20RACI%20PERT%20Hire-U[...]
-<article class="card"><div class="num">DOCUMENTO 06</div><h3>Manual de instrucciones</h3><p>Guía preliminar de acceso, registro, consulta y solución de problemas.</p><a class="btn" href="manual%20de[...]
-<article class="card"><div class="num">DOCUMENTO 07</div><h3>Costos y presupuesto</h3><p>Estimación académica de recursos, costos fijos, variables y contingencia.</p><a class="btn" href="HIRE_U_Pres[...]
-</div></div></section>
+  <section class="section" id="documentos"><div class="container"><div class="sectionhead"><div class="eyebrow">02 · Entregables</div><h2>Documentación del proyecto</h2><p>Consulta o descarga los principales documentos que acompañan el proyecto.</p></div>
+    <div class="grid">
+      <article class="card"><div class="num">DOCUMENTO 01</div><h3>Acta de presentación</h3><p>Descripción, justificación y objetivos.</p><a class="btn" href="01-acta.pdf">Descargar</a></article>
+      <article class="card"><div class="num">DOCUMENTO 02</div><h3>Plan de gestión</h3><p>Metodología de trabajo, fases y gestión de riesgos.</p><a class="btn" href="plan%20de%20gestion%20y%20EDT.pdf">Descargar</a></article>
+      <article class="card"><div class="num">DOCUMENTO 03</div><h3>EDT</h3><p>Desglose de fases y entregables.</p><a class="btn" href="plan%20de%20gestion%20y%20EDT.pdf">Descargar</a></article>
+    </div></div></section>
 
-<section class="section" id="gestion"><div class="container"><div class="sectionhead"><div class="eyebrow">03 · Planeación</div><h2>Ruta de trabajo estimada</h2><p>Secuencia preliminar de actividade[...]
-<div class="timeline">
-<div class="step"><b>A</b><div><strong>Inicio y alcance · 2 días</strong><span>Definición del problema, objetivos y alcance.</span></div></div>
-<div class="step"><b>B</b><div><strong>Planificación · 3 días</strong><span>Organización de tareas, recursos y requisitos.</span></div></div>
-<div class="step"><b>C</b><div><strong>Diseño de interfaz · 4 días</strong><span>Diseño visual, navegación y pantallas.</span></div></div>
-<div class="step"><b>D</b><div><strong>Desarrollo web · 10 días</strong><span>Implementación progresiva de las funciones priorizadas.</span></div></div>
-<div class="step"><b>E</b><div><strong>Pruebas y correcciones · 4 días</strong><span>Validación de navegación, formularios y compatibilidad.</span></div></div>
-<div class="step"><b>F</b><div><strong>Documentación y entrega · 3 días</strong><span>Actualización del manual y revisión de enlaces.</span></div></div>
-</div>
-<p class="notice">Duración estimada de la secuencia: 26 días hábiles. Debe ajustarse a los avances reales y a las fechas acordadas por el equipo.</p>
-<div class="tablewrap"><table><thead><tr><th>Recurso</th><th>Estimación</th></tr></thead><tbody><tr><td>Mano de obra estimada</td><td>$1.900.000 COP</td></tr><tr><td>Dominio web anual</td><td>$80.000[...]
-<p class="notice">Los valores son estimaciones académicas, no cotizaciones. Se supone alojamiento estático gratuito; un backend o base de datos alojada puede generar costos adicionales.</p>
-</div></section>
+  <section class="section" id="gestion"><div class="container"><div class="sectionhead"><div class="eyebrow">03 · Planeación</div><h2>Ruta de trabajo estimada</h2><p>Secuencia preliminar de actividades para llevar el proyecto de idea a entrega.</p></div>
+    <div class="timeline">
+      <div class="step"><b>A</b><div><strong>Inicio y alcance · 2 días</strong><span>Definición del problema, objetivos y alcance.</span></div></div>
+      <div class="step"><b>B</b><div><strong>Planificación · 3 días</strong><span>Organización de tareas, recursos y requisitos.</span></div></div>
+      <div class="step"><b>C</b><div><strong>Diseño de interfaz · 4 días</strong><span>Diseño visual y pantallas.</span></div></div>
+    </div>
+    <p class="notice">Duración estimada: 26 días hábiles. Valores estimados y sujetos a ajustes.</p>
+  </div></section>
 
-<section class="section" id="equipo"><div class="container"><div class="sectionhead"><div class="eyebrow">04 · Equipo</div><h2>Equipo de trabajo</h2><p>Integrantes del Proyecto Integrador HIRE-U.</p>[...]
-<div class="split">
-<article class="panel"><h3>Responsabilidad general</h3><p>Se espera una organización colaborativa del equipo para la ejecución de tareas, definición de requisitos, diseño de la plataforma y valida[...]
-<article class="panel"><h3>Enfoque de trabajo</h3><p>El proyecto busca combinar gestión académica, diseño visual, narrativa clara y estructura técnica para presentar una propuesta sólida para el [...]
-</div></div></section>
+  <section class="section" id="equipo"><div class="container"><div class="sectionhead"><div class="eyebrow">04 · Equipo</div><h2>Equipo de trabajo</h2><p>Integrantes del Proyecto Integrador HIRE-U.</p></div>
+    <div class="split">
+      <article class="panel"><h3>Responsabilidad general</h3><p>Organización colaborativa y ejecución de tareas.</p></article>
+      <article class="panel"><h3>Enfoque de trabajo</h3><p>Combinar gestión académica, diseño visual y estructura técnica para una propuesta sólida.</p></article>
+    </div></div></section>
 </main>
-<footer class="footer"><div class="container footerin"><span>© HIRE-U · Proyecto Integrador de Ingeniería de Sistemas</span><a href="#inicio">Volver al inicio ↑</a></div></footer>
+<footer class="footer"><div class="container footerin"><span>© HIRE-U · Proyecto Integrador de Ingeniería de Sistemas</span> <a href="#inicio" style="display:inline-block;margin-left:12px;color:var(--muted)">Volver al inicio ↑</a></div></footer>
 </body>
 </html>
